@@ -1,20 +1,5 @@
-CREATE DATABASE `horseshow` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */;
-CREATE TABLE `riders` (
-  `rider_id` int(11) NOT NULL AUTO_INCREMENT,
-  `rider_fname` varchar(100) DEFAULT NULL,
-  `rider_lname` varchar(100) DEFAULT NULL,
-  `sex` char(1) DEFAULT NULL,
-  `birth` date DEFAULT NULL,
-  `nationality` varchar(100) DEFAULT NULL,
-  `trainer_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`rider_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
-CREATE TABLE `horses` (
-  `horse_id` int(11) NOT NULL AUTO_INCREMENT,
-  `horse_name` varchar(100) DEFAULT NULL,
-  `owner_id` int(11) DEFAULT NULL,
-  `sex` char(1) DEFAULT NULL,
-  `birth` date DEFAULT NULL,
-  `trainer_id` int(11) DEFAULT NULL,
-  PRIMARY KEY (`horse_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+CREATE DATABASE horseshow;
+CREATE TABLE riders (rider_id INT AUTO_INCREMENT PRIMARY KEY, rider_fname VARCHAR(100) NOT NULL,
+       rider_lname VARCHAR(100), sex CHAR(1), birth DATE, nationality VARCHAR(100), trainer_id INT);
+CREATE TABLE horses (horse_id INT AUTO_INCREMENT PRIMARY KEY, horse_name VARCHAR(100) NOT NULL,
+       owner_id INT, sex CHAR(1), birth DATE, trainer_id INT);
